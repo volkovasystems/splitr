@@ -43,8 +43,6 @@
 		Split string.
 
 		This will always return an array.
-
-		If the pattern does not exist on the string, this will return empty array.
 	@end-module-documentation
 
 	@include:
@@ -89,10 +87,6 @@ const splitr = function splitr( string, pattern ){
 
 	if( !( pattern instanceof RegExp ) ){
 		throw new Error( "invalid pattern" );
-	}
-
-	if( !pattern.test( string ) ){
-		return [ ];
 	}
 
 	return string.split( pattern );
