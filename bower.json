@@ -1,27 +1,23 @@
 {
-  "name": "splitr",
-  "version": "0.1.0",
-  "description": "Split string.",
-  "main": "splitr.js",
-  "authors": [
-    "Richeve S. Bebedor <richeve.bebedor@gmail.com>"
-  ],
-  "license": "MIT",
-  "keywords": [
-    "split",
-    "string",
-    "splitr"
-  ],
-  "homepage": "https://github.com/volkovasystems/splitr",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "falzy": "^0.20.0",
-    "stringe": "^0.4.0"
-  }
+	"name": "splitr",
+	"version": "0.1.0",
+	"description": "Split string.",
+	"main": "splitr.js",
+	"authors": [
+		"Richeve S. Bebedor <richeve.bebedor@gmail.com>"
+	],
+	"license": "MIT",
+	"keywords": [
+		"split",
+		"string",
+		"splitr"
+	],
+	"homepage": "https://github.com/volkovasystems/splitr",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	]
 }
