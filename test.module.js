@@ -51,7 +51,7 @@
 	@end-include
 */
 
-const assert = require( "should" );
+const assert = require( "should/as-function" );
 
 //: @server:
 const splitr = require( "./splitr.js" );
@@ -70,24 +70,56 @@ const path = require( "path" );
 
 describe( "splitr", ( ) => {
 
+	describe( "`splitr( 'hello world', /\s/ )`", ( ) => {
+		it( "should be equal to [ 'hello', 'world' ]", ( ) => {
+			assert.deepEqual( splitr( "hello world", /\s/ ), [ "hello", "world" ] );
+		} );
+	} );
+
+	// describe( "`splitr( null, /\s/ )`", ( ) => {
+	// 	it( "should be equal to empty array", ( ) => {
+	// 		assert.deepEqual( splitr( null, /\s/ ), [ ] );
+	// 	} );
+	// } );
+
 } );
 
 //: @end-server
 
 
 //: @client:
-
 describe( "splitr", ( ) => {
 
-} );
+	describe( "`splitr( 'hello world', /\s/ )`", ( ) => {
+		it( "should be equal to [ 'hello', 'world' ]", ( ) => {
+			assert.deepEqual( splitr( "hello world", /\s/ ), [ "hello", "world" ] );
+		} );
+	} );
 
+} );
 //: @end-client
 
 
 //: @bridge:
-
 describe( "splitr", ( ) => {
 
-} );
+	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
 
+	describe( "`splitr( 'hello world', /\s/ )`", ( ) => {
+		it( "should be equal to [ 'hello', 'world' ]", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return JSON.stringify( splitr( "hello world", /\s/ ) );
+				}
+
+			).value;
+			//: @end-ignore
+
+			assert.deepEqual( JSON.parse( result ), [ "hello", "world" ] );
+		} );
+	} );
+
+} );
 //: @end-bridge
