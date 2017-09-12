@@ -67,7 +67,6 @@ const path = require( "path" );
 
 
 //: @server:
-
 describe( "splitr", ( ) => {
 
 	describe( "`splitr( 'hello world', /\s/ )`", ( ) => {
@@ -76,14 +75,13 @@ describe( "splitr", ( ) => {
 		} );
 	} );
 
-	// describe( "`splitr( null, /\s/ )`", ( ) => {
-	// 	it( "should be equal to empty array", ( ) => {
-	// 		assert.deepEqual( splitr( null, /\s/ ), [ ] );
-	// 	} );
-	// } );
+	describe( "`splitr( null, /\s/ )`", ( ) => {
+		it( "should be equal to [ 'null' ]", ( ) => {
+			assert.deepEqual( splitr( null, /\s/ ), [ "null" ] );
+		} );
+	} );
 
 } );
-
 //: @end-server
 
 
@@ -93,6 +91,12 @@ describe( "splitr", ( ) => {
 	describe( "`splitr( 'hello world', /\s/ )`", ( ) => {
 		it( "should be equal to [ 'hello', 'world' ]", ( ) => {
 			assert.deepEqual( splitr( "hello world", /\s/ ), [ "hello", "world" ] );
+		} );
+	} );
+
+	describe( "`splitr( null, /\s/ )`", ( ) => {
+		it( "should be equal to [ 'null' ]", ( ) => {
+			assert.deepEqual( splitr( null, /\s/ ), [ "null" ] );
 		} );
 	} );
 
@@ -118,6 +122,22 @@ describe( "splitr", ( ) => {
 			//: @end-ignore
 
 			assert.deepEqual( JSON.parse( result ), [ "hello", "world" ] );
+		} );
+	} );
+
+	describe( "`splitr( null, /\s/ )`", ( ) => {
+		it( "should be equal to [ 'null' ]", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return JSON.stringify( splitr( null, /\s/ ) );
+				}
+
+			).value;
+			//: @end-ignore
+
+			assert.deepEqual( JSON.parse( result ), [ "null" ] );
 		} );
 	} );
 
