@@ -1,0 +1,84 @@
+{
+	"state": {
+		"passed": 1,
+		"failed": 0,
+		"skipped": 0
+	},
+	"start": "2017-09-12T09:38:43.823Z",
+	"end": "2017-09-12T09:39:31.283Z",
+	"capabilities": {
+		"browserName": "chrome",
+		"chromeOptions": {
+			"args": [
+				"disable-gpu",
+				"headless"
+			]
+		},
+		"proxy": null
+	},
+	"host": "127.0.0.1",
+	"port": 4444,
+	"baseUrl": "http://localhost",
+	"framework": "mocha",
+	"mochaOpts": {
+		"timeout": 10000,
+		"ui": "bdd"
+	},
+	"suites": [
+		{
+			"name": "splitr",
+			"duration": 0,
+			"start": "2017-09-12T09:39:31.022Z",
+			"tests": [],
+			"hooks": []
+		},
+		{
+			"name": "splitr",
+			"duration": 78,
+			"start": "2017-09-12T09:39:31.023Z",
+			"end": "2017-09-12T09:39:31.101Z",
+			"tests": [],
+			"hooks": [
+				{
+					"start": "2017-09-12T09:39:31.024Z",
+					"end": "2017-09-12T09:39:31.024Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "splitr",
+					"associatedTest": "should be equal to [ 'hello', 'world' ]"
+				},
+				{
+					"start": "2017-09-12T09:39:31.100Z",
+					"end": "2017-09-12T09:39:31.101Z",
+					"duration": 1,
+					"title": "\"after each\" hook",
+					"associatedSuite": "splitr",
+					"associatedTest": "should be equal to [ 'hello', 'world' ]"
+				},
+				{
+					"start": "2017-09-12T09:39:31.101Z",
+					"end": "2017-09-12T09:39:31.101Z",
+					"duration": 0,
+					"title": "\"after all\" hook",
+					"associatedSuite": "splitr"
+				}
+			]
+		},
+		{
+			"name": "`splitr( 'hello world', /s/ )`",
+			"duration": 78,
+			"start": "2017-09-12T09:39:31.023Z",
+			"end": "2017-09-12T09:39:31.101Z",
+			"tests": [
+				{
+					"name": "should be equal to [ 'hello', 'world' ]",
+					"start": "2017-09-12T09:39:31.024Z",
+					"end": "2017-09-12T09:39:31.100Z",
+					"duration": 76,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		}
+	]
+}

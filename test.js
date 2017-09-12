@@ -51,7 +51,7 @@
 	@end-include
 */
 
-const assert = require( "should" );
+const assert = require( "should/as-function" );
 
 //: @server:
 const splitr = require( "./splitr.js" );
@@ -65,6 +65,18 @@ const splitr = require( "./splitr.js" );
 //: @server:
 
 describe( "splitr", ( ) => {
+
+	describe( "`splitr( 'hello world', /\s/ )`", ( ) => {
+		it( "should be equal to [ 'hello', 'world' ]", ( ) => {
+			assert.deepEqual( splitr( "hello world", /\s/ ), [ "hello", "world" ] );
+		} );
+	} );
+
+	// describe( "`splitr( null, /\s/ )`", ( ) => {
+	// 	it( "should be equal to empty array", ( ) => {
+	// 		assert.deepEqual( splitr( null, /\s/ ), [ ] );
+	// 	} );
+	// } );
 
 } );
 
