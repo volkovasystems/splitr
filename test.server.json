@@ -1,19 +1,26 @@
 {
 	"stats": {
-		"suites": 2,
-		"tests": 1,
-		"passes": 1,
+		"suites": 3,
+		"tests": 2,
+		"passes": 2,
 		"pending": 0,
 		"failures": 0,
-		"start": "2017-09-12T09:38:42.636Z",
-		"end": "2017-09-12T09:38:42.641Z",
-		"duration": 5
+		"start": "2017-09-12T10:11:56.605Z",
+		"end": "2017-09-12T10:11:56.612Z",
+		"duration": 7
 	},
 	"tests": [
 		{
 			"title": "should be equal to [ 'hello', 'world' ]",
 			"fullTitle": "splitr `splitr( 'hello world', /s/ )` should be equal to [ 'hello', 'world' ]",
 			"duration": 2,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to [ 'null' ]",
+			"fullTitle": "splitr `splitr( null, /s/ )` should be equal to [ 'null' ]",
+			"duration": 0,
 			"currentRetry": 0,
 			"err": {}
 		}
@@ -25,6 +32,13 @@
 			"title": "should be equal to [ 'hello', 'world' ]",
 			"fullTitle": "splitr `splitr( 'hello world', /s/ )` should be equal to [ 'hello', 'world' ]",
 			"duration": 2,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to [ 'null' ]",
+			"fullTitle": "splitr `splitr( null, /s/ )` should be equal to [ 'null' ]",
+			"duration": 0,
 			"currentRetry": 0,
 			"err": {}
 		}

@@ -1,11 +1,11 @@
 {
 	"state": {
-		"passed": 1,
+		"passed": 2,
 		"failed": 0,
 		"skipped": 0
 	},
-	"start": "2017-09-12T09:38:43.823Z",
-	"end": "2017-09-12T09:39:31.283Z",
+	"start": "2017-09-12T10:11:58.045Z",
+	"end": "2017-09-12T10:12:32.435Z",
 	"capabilities": {
 		"browserName": "chrome",
 		"chromeOptions": {
@@ -28,36 +28,52 @@
 		{
 			"name": "splitr",
 			"duration": 0,
-			"start": "2017-09-12T09:39:31.022Z",
+			"start": "2017-09-12T10:12:32.086Z",
 			"tests": [],
 			"hooks": []
 		},
 		{
 			"name": "splitr",
-			"duration": 78,
-			"start": "2017-09-12T09:39:31.023Z",
-			"end": "2017-09-12T09:39:31.101Z",
+			"duration": 167,
+			"start": "2017-09-12T10:12:32.087Z",
+			"end": "2017-09-12T10:12:32.254Z",
 			"tests": [],
 			"hooks": [
 				{
-					"start": "2017-09-12T09:39:31.024Z",
-					"end": "2017-09-12T09:39:31.024Z",
-					"duration": 0,
+					"start": "2017-09-12T10:12:32.089Z",
+					"end": "2017-09-12T10:12:32.090Z",
+					"duration": 1,
 					"title": "\"before each\" hook",
 					"associatedSuite": "splitr",
 					"associatedTest": "should be equal to [ 'hello', 'world' ]"
 				},
 				{
-					"start": "2017-09-12T09:39:31.100Z",
-					"end": "2017-09-12T09:39:31.101Z",
-					"duration": 1,
+					"start": "2017-09-12T10:12:32.205Z",
+					"end": "2017-09-12T10:12:32.205Z",
+					"duration": 0,
 					"title": "\"after each\" hook",
 					"associatedSuite": "splitr",
 					"associatedTest": "should be equal to [ 'hello', 'world' ]"
 				},
 				{
-					"start": "2017-09-12T09:39:31.101Z",
-					"end": "2017-09-12T09:39:31.101Z",
+					"start": "2017-09-12T10:12:32.206Z",
+					"end": "2017-09-12T10:12:32.206Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "splitr",
+					"associatedTest": "should be equal to [ 'null' ]"
+				},
+				{
+					"start": "2017-09-12T10:12:32.254Z",
+					"end": "2017-09-12T10:12:32.254Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "splitr",
+					"associatedTest": "should be equal to [ 'null' ]"
+				},
+				{
+					"start": "2017-09-12T10:12:32.254Z",
+					"end": "2017-09-12T10:12:32.254Z",
 					"duration": 0,
 					"title": "\"after all\" hook",
 					"associatedSuite": "splitr"
@@ -66,15 +82,31 @@
 		},
 		{
 			"name": "`splitr( 'hello world', /s/ )`",
-			"duration": 78,
-			"start": "2017-09-12T09:39:31.023Z",
-			"end": "2017-09-12T09:39:31.101Z",
+			"duration": 118,
+			"start": "2017-09-12T10:12:32.088Z",
+			"end": "2017-09-12T10:12:32.206Z",
 			"tests": [
 				{
 					"name": "should be equal to [ 'hello', 'world' ]",
-					"start": "2017-09-12T09:39:31.024Z",
-					"end": "2017-09-12T09:39:31.100Z",
-					"duration": 76,
+					"start": "2017-09-12T10:12:32.089Z",
+					"end": "2017-09-12T10:12:32.205Z",
+					"duration": 116,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`splitr( null, /s/ )`",
+			"duration": 48,
+			"start": "2017-09-12T10:12:32.206Z",
+			"end": "2017-09-12T10:12:32.254Z",
+			"tests": [
+				{
+					"name": "should be equal to [ 'null' ]",
+					"start": "2017-09-12T10:12:32.206Z",
+					"end": "2017-09-12T10:12:32.254Z",
+					"duration": 48,
 					"state": "pass"
 				}
 			],

@@ -63,7 +63,6 @@ const splitr = require( "./splitr.js" );
 
 
 //: @server:
-
 describe( "splitr", ( ) => {
 
 	describe( "`splitr( 'hello world', /\s/ )`", ( ) => {
@@ -72,14 +71,13 @@ describe( "splitr", ( ) => {
 		} );
 	} );
 
-	// describe( "`splitr( null, /\s/ )`", ( ) => {
-	// 	it( "should be equal to empty array", ( ) => {
-	// 		assert.deepEqual( splitr( null, /\s/ ), [ ] );
-	// 	} );
-	// } );
+	describe( "`splitr( null, /\s/ )`", ( ) => {
+		it( "should be equal to [ 'null' ]", ( ) => {
+			assert.deepEqual( splitr( null, /\s/ ), [ "null" ] );
+		} );
+	} );
 
 } );
-
 //: @end-server
 
 
